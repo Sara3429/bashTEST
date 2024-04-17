@@ -1,0 +1,5 @@
+K-POINTS 	#supercell of CrS2 in hexagonal steructure
+ 0		#determines number of k points automatically
+Gamma	        #Style of Kpoints
+ 8   8   1	#subdivision N1,N2,N3 along the reciprocal lattice vector 
+ 0.  0.  0.     #this part is optional to shist the mesh by s1,s2,s3

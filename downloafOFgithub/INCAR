@@ -1,0 +1,20 @@
+#SYSTEM = GRAphen
+ALGO = Normal      #algorithm for electron optimization
+PREC = Normal
+ISTART = 0        #without WAVECAR file
+ICHARG = 2        #the initial charge density
+ISPIN = 1         #non spin polarized
+#ENCUT = 400.0       #cutoff energy and should be largest EnMAX in the POTCAR file
+ISIF = 3            #length and angle are important
+IBRION = 1
+#EDIFF = 1E-05
+NSW = 100           #the number of iteration steps to improve the structure
+POTIM = 0.5          # accuracy of simulation at each step
+#NBANDS = 8          #number of bands and usually can be between 8 to 12
+LPLANE = .FALSE.        #new change for last RUN in 3 of Bahman
+LREAL = .FALSE.       #virtual methods for electronic computingf
+LWAVE = .FALSE.      #Lowdin orthogonalization
+ISMEAR = 0          # no using of Gaussian smearing method
+LCHARG = .FALSE.     # useing of CHGCAR file
+
+

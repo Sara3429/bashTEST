@@ -1,0 +1,28 @@
+#!/bin/bash
+#SBATCH -M truba 
+#SBATCH -p mid2
+##SBATCH -A modarresi
+#SBATCH -A tbag78
+#SBATCH -J AB1
+#SBATCH -N 1 
+#SBATCH -n 32
+#SBATCH --time=20:00:00 
+#SBATCH --mail-type=ALL
+#SBATCH --output=out
+#SBATCH --error=err
+
+echo "SLURM_NTASKS= $SLURM_NTASKS" 
+echo "SLURM_TASKS_PER_NODE= $SLURM_TASKS_PER_NODE" 
+echo "SLURM_NNODES= $SLURM_NNODES"
+echo "SLURM_NODELIST= $SLURM_NODELIST" 
+echo "SLURM_CPU_BIND= $SLURM_CPU_BIND" 
+echo "SLURM_JOB_CPUS_PER_NODE= $SLURM_JOB_CPUS_PER_NODE" 
+
+. /usr/share/Modules/init/bash
+source /truba/sw/centos7.3/comp/intel/PS2018-update2/bin/compilervars.sh intel64
+
+ulimit -s unlimited
+ulimit -l unlimited
+export OMP_NUM_THREADS=1
+
+cd result1 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result2 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result3 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result4 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result5 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result6 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result7 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result8 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result9 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result10 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result11 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result12 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result13 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result14 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result15 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result16 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result17 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result18 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result19 ; mpirun /truba/home/modarresi/vasp/vasp_std ; cd .. ; cd result20
